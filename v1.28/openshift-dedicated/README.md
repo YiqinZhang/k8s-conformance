@@ -96,9 +96,6 @@ oc get nodes | grep infra | awk '{print $1}' | xargs oc get nodes -o yaml | grep
 
 ```
 $ go install sigs.k8s.io/hydrophone@latest
-$ go mod tidy
-$ make build
-go build -o bin/hydrophone main.go
 ```
 ```
 bin/hydrophone --conformance --conformance-image registry.k8s.io/conformance:v1.28.6 --extra-args="--allowed-not-ready-nodes=3"
